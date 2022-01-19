@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="button" onclick="closer()" />
+</body>
+
+<script type="text/javascript">
+	var timer = setInterval(
+		function(){
+			alert("hello");
+		},
+		2000
+	);
+	var closer = function(){
+		clearInterval(timer);
+	}
+</script>
+
+</html>

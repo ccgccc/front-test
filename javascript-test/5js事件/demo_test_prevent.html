@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="http://www.baidu.com" id="test"> Click Me </a>
+	<script type="text/javascript">
+		var test = document.getElementById('test');
+		function stopDefault(e) {
+			if (e && e.preventDefault)
+				e.preventDefault();
+			else
+				window.event.returnValue = false;
+		}
+		test.onclick = function(e) {
+			stopDefault(e);
+		}
+	</script>
+</body>
+</html>

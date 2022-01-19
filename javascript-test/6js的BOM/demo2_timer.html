@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="button" onclick="closer()"/>
+</body>
+
+<script type="text/javascript">
+	/* setTimeout(
+		function (){
+			alert("xxx");
+		},
+		3000
+	); */
+	
+	var fn = function(){
+		alert("x");
+		timer = setTimeout(fn,2000);
+	}
+	fn();
+	
+	function closer(){	//不能用close，与库函数同名
+		alert("vvv");
+		clearTimeout(timer);
+	}
+</script>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	#page{
+		text-align: center;
+		line-height: 50px;
+	}
+	table{
+		width: 30%;
+		border: 1px solid black;
+		/* border-collapse: collapse; */
+		margin: 0px auto;
+	}
+	table td,table th{
+		border: 1px solid black;
+	}
+</style>
+
+<script type="text/javascript">
+window.onload = function(){
+	var btn = document.getElementById("btn");
+	btn.onclick = function(){
+	
+		/* var name1 = document.getElementById("name");
+		var email = document.getElementById("email");
+		var phone = document.getElementById("phone");
+		
+		var td1 = document.createElement("td");
+		var txt1 = document.createTextNode(name1.value);
+		td1.appendChild(txt1);
+		var td2 = document.createElement("td");
+		var txt2 = document.createTextNode(email.value);
+		td2.appendChild(txt2);
+		var td3 = document.createElement("td");
+		var txt3 = document.createTextNode(phone.value);
+		td3.appendChild(txt3);
+		var td4 = document.createElement("td");
+		var a1 = document.createElement("a");
+		a1.setAttribute("href",	"#")
+		var txt4 = document.createTextNode("Delete");
+		a1.appendChild(txt4);
+		td4.appendChild(a1);
+				
+		var tr = document.createElement("tr");
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		tr.appendChild(td3);
+		tr.appendChild(td4); */
+		
+		var tr = document.createElement("tr");
+		var inputNodes = document.getElementsByTagName("input");
+		for(var i=0; i<inputNodes.length-1; i++){
+			var inputNode = inputNodes[i];
+			var td = document.createElement("td");
+			var txt = document.createTextNode(inputNode.value);
+			td.appendChild(txt);
+			tr.appendChild(td);
+		}
+		var td1 = document.createElement("td");
+		var a1 = document.createElement("a");
+		a1.setAttribute("href", "#")
+		var txt4 = document.createTextNode("Delete");
+		a1.appendChild(txt4);
+		td1.appendChild(a1);
+		tr.appendChild(td1);
+	
+		var table = document.getElementById("table");
+		table.appendChild(tr);
+		
+		a1.onclick = function(){
+			var tr = this.parentNode.parentNode;
+			var table = tr.parentNode;
+			table.removeChild(tr);
+			return false;
+		}
+	}
+	
+	var aa = document.getElementsByTagName("a");
+	aa[0].onclick = function(){
+		var tr = this.parentNode.parentNode;
+			var table = tr.parentNode;
+			table.removeChild(tr);
+			return false;
+	}
+}
+</script>
+
+</head>
+<body>
+	<div id="page">
+		<div id="title">添加用户:</div>
+		<div id="user">
+			姓名：<input type="text" id="name"/ >&nbsp;&nbsp;&nbsp;&nbsp;
+			email：<input type="text" value="" id="email" />&nbsp;&nbsp;&nbsp;&nbsp;
+			电话：<input type="text" value="" id="phone" /><br/>
+			<input type="button" value="提交" id="btn" />
+		</div>
+		<br/>
+		<hr/>
+		<br/>
+		<table id="table">
+			<tr>
+				<th>姓名</th>
+				<th>email</th>
+				<th>电话</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>tom</td>
+				<td>123456789@163.com</td>
+				<td>18742011593</td>
+				<td>
+					<a href="#">Delete</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- <a href="demo7.html" onclick="return false">click me</a> -->
+	<a href="demo7.html" onclick="fn(event)">click me</a>
+</body>
+
+<script type="text/javascript">
+	function fn(e){
+		//alert("xxx");
+		if(e && e.preventDefault){
+			alert("w3c");
+			e.preventDefault();
+		} else {
+			alert("ie");
+			window.event.returnValue = false;
+		}
+	}
+</script>
+
+</html>

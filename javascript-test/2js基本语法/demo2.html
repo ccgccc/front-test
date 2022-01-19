@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	//类型转换
+	/* var x = 5;
+	var b = true;
+	alert(typeof x);
+	alert(typeof x.toString());
+	alert(typeof b);
+	alert(typeof b.toString()); */
+	
+/* 	var b = true;
+	var s = "xxx";
+	var s1 = "123a5ba"
+	alert(typeof parseInt(b));
+	alert(parseInt(b));	//不能转
+	alert(typeof parseInt(s));
+	alert(parseInt(s));
+	alert(typeof parseInt(s1));	//含数字可以转前面部分数字
+	alert(parseInt(s1)); */
+/* 	var s2 = "123.45";
+	alert(parseFloat(s2)); */
+	
+	//强制转换
+	var x = 5;
+	var b = true;
+	alert(typeof String(x));
+	alert(typeof String(b));
+	
+/* 	var x = 5;
+	var x1 = -5;
+	var x2 = 0;
+	alert(Boolean(x));
+	alert(Boolean(x1));
+	alert(Boolean(x2)); */
+/* 	var s = "";
+	alert(Boolean(s));
+	var s1 = " ";
+	alert(Boolean(s1)); */
+	
+/* 	var b = true;
+	var b1 = false;	//true强转成1，false强转成0
+	alert(Number(b));
+	alert(Number(b1)); */
+	var s = "xx";
+	var s1 = "123a5ab";	//无法强转成123
+	var s2 = " ";	//空字符串与空格强转成0
+	var s3 = "123";
+	alert(Number(s));
+	alert(Number(s1));
+	alert(Number(s2));
+	alert(Number(s3));
+	
+		
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>
